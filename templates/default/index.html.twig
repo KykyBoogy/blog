@@ -8,6 +8,12 @@
 
     <h1>Liste des articles</h1>
 
+    {{ articles|taille }}
+
+    {% set resultat = addition(2, 5) %}
+
+    <p>{{ resultat }}</p>
+
     {{ "now"|date("d/m/Y") }}
 
     {% set temperature = 3 %}
@@ -27,3 +33,4 @@
     </ul>
 
 {% endblock %}
+
