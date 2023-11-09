@@ -4,8 +4,6 @@
 
 {% block body %}
 
-    {% include 'menu/_menu.html.twig' %}
-
     <h1>Liste des articles</h1>
 
     {{ articles|taille }}
@@ -27,7 +25,7 @@
     <ul>
     {% for article in articles %}
 
-        <li><a href="{{ path('vue_article', { 'id':article['id'] }) }}">{{ article['nom'] }}</a></li>
+        <li><a href="{{ path('vue_article', { 'id':article.id }) }}">{{ article.titre }}</a> {{ article.dateCreation|date('d/m/Y') }}</li>
 
     {% endfor %}
     </ul>
